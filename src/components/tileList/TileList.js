@@ -1,15 +1,16 @@
 import React from "react";
 import { Tile } from '../tile/Tile';
 
-export const TileList = ({contacts}) => {
+export const TileList = ({array}) => {
   return (
     <div>
-      {contacts.map((contact) => {
+      
+      {array.map((arrayItem) => {
         return (
           <Tile 
-            name={contact.name}
-            email={contact.email}
-            phone={contact.phone}
+            name={arrayItem.name}
+            email={arrayItem.email}
+            phone={arrayItem.phone}
           />       
         )
       })}
