@@ -22,13 +22,12 @@ function App() {
   ]);
   };
 
-  const addAppointment = (title, name, contact, date, time) => {
+  const addAppointment = (nameApp, date, time, chosenContact) => {
     setAppointments([...appointments, {
-      title: title,
-      contact: contact,
       date: date,
       time: time,
-      name: name,
+      nameApp: nameApp,
+      chosenContact: chosenContact
     },
   ]);
   }

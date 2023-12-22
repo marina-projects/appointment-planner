@@ -1,31 +1,22 @@
 import React, { useState } from "react";
 
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
-import { TileList } from "../../components/tileList/TileList";
+import { AppointmentList } from "../../components/appointmentList/appointmentList";
 
 export const AppointmentsPage = ( {contacts, appointments, addAppointment} ) => {
-  /*
-  Define state variables for 
-  appointment info
-  */
-  const [title, setTitle] = useState('');
-  const [contact, setContact] = useState('');
+
+  const [nameApp, setNameApp] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [name, setName] = useState('');
+  const [chosenContact, setChosenContact] = useState({});
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addAppointment(name, title, contact, date, time);
-    setTitle('');
-    setContact('');
+    addAppointment(nameApp, date, time, chosenContact);
     setDate('');
     setTime('');
-    alert(`Contact: ${name}, date: ${date}, time: ${time}`)
-    /*
-    Add contact info and clear data  
-    */
-   
+    setNameApp('');
   };
 
   return (
@@ -33,24 +24,22 @@ export const AppointmentsPage = ( {contacts, appointments, addAppointment} ) => 
       <section>
         <h2>Add Appointment</h2>
         <AppointmentForm 
-          title={title}
-          setTitle={setTitle}
-          contact={setContact}
-          setContact={setContact}
           date={date}
           setDate={setDate}
           time={time}
           setTime={setTime}
-          name={name}
-          setName={setName}
+          nameApp={nameApp}
+          setNameApp={setNameApp}
           handleSubmit={handleSubmit}
           contacts={contacts}
+          chosenContact={chosenContact}
+          setChosenContact={setChosenContact}
         />
       </section>
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList array={appointments} />
+        <AppointmentList appointments={appointments} />
       </section>
     </div>
   );
