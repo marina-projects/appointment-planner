@@ -5,8 +5,7 @@ import iconAdd from '../../images/icon-add.svg';
 import iconAppointments from '../../images/icon-appointments.svg';
 import iconUsers from '../../images/icon-users.svg';
 import iconLogout from '../../images/icon-logout.svg';
-
-
+import { PlusCircle, PlusCircleFill, Calendar4Week, People, CalendarPlus } from 'react-bootstrap-icons';
 
 export const ROUTES = {
     CONTACTS: "/contacts",
@@ -47,19 +46,19 @@ function Root( {handleLoginLogout, isLogin} ) {
                         <h2>Hello, admin!</h2>
                         <p>It’s your dashboard to make appointments from clients</p>
                         <NavLink to={ROUTES.CONTACTFORM} className="menu-item-card">
-                            <img src={iconAdd} alt='' />
+                            <PlusCircle className="boot-icon"/>
                             Add new contact
                         </NavLink>
                         <NavLink to={ROUTES.APPFORM} className="menu-item-card">
-                            <img src={iconAdd} alt='' />
+                            <CalendarPlus className="boot-icon"/>
                             Add new appointment
                         </NavLink>
                         <NavLink to={ROUTES.APPOINTMENTS} className="menu-item-card" >
-                            <img src={iconAppointments} alt='' />
+                            <Calendar4Week className="boot-icon"/>
                             Appointments
                         </NavLink>
                         <NavLink to={ROUTES.CONTACTS} className="menu-item-card" >
-                            <img src={iconUsers} alt='' />        
+                            <People className="boot-icon"/>        
                             Contacts
                         </NavLink>
                     </div>

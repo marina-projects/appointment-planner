@@ -93,6 +93,14 @@ nav > a {
     color: white;
 }
 
+.menu-item-card a {
+    color: #7A5980;
+}
+
+.menu-item-card.active a {
+    color: white;
+}
+
 .menu-item-card:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
@@ -118,10 +126,13 @@ nav > a {
     margin-left: 30px;
 }
 
-.nav-cards svg {
-    color: white;
+.menu-item-card .boot-icon {
+    color: #7A5980;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 15px;
 }
 
-.nav-cards img {
-    fill: white !important;
+.menu-item-card.active .boot-icon {
+    color: white;
 }
