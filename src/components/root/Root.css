@@ -1,0 +1,127 @@
+.nav-div {
+    width: 25%;
+    border: none;
+    background-color: #F5F5F5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+  top: 10%;
+  left: 0;
+}
+
+.main-content {
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+    height: 100vh; /* Устанавливаем высоту, чтобы колонка занимала всю доступную высоту, при необходимости можно настроить в зависимости от ваших требований */
+    margin-left: 25%;
+    margin-top: 90px;
+}
+
+.main-page {
+    width: 75%;
+    height: 100%;
+}
+
+.menu-item {
+    color: #7A5980;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.menu-item.active {
+    text-decoration: none;
+}
+
+nav {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+nav > a {
+    margin: 0;
+    font-size: 16px;
+}
+
+.menu-item img {
+    margin-right: 10px;
+}
+
+.logout button {
+    background-color: transparent;
+    margin-bottom: 30px;
+    margin-right: 40px;
+}
+
+.logout .menu-item {
+    text-transform: none;
+}
+
+.nav-cards {
+    justify-content: space-around;
+    height: 40%;
+    margin-bottom: 40px;
+}
+
+.menu-item-card {
+    width: 20%;
+    height: 125px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.menu-item-card.active {
+    background-color: #7A5980;
+    color: white;
+}
+
+.menu-item-card:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.nav-cards h2, .nav-cards p {
+    width: 100%;
+    margin-left: 40px;
+    color: #3B3B58;
+}
+
+.nav-cards h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.nav-cards p {
+    margin-bottom: 40px;
+}
+
+.outlet section {
+    margin-left: 30px;
+}
+
+.nav-cards svg {
+    color: white;
+}
+
+.nav-cards img {
+    fill: white !important;
+}

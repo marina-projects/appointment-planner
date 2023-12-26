@@ -1,0 +1,74 @@
+.form-section {
+    background-color: #F5F5F5 ;
+    padding: 30px 50px ;
+    border-radius: 20px;
+    width: 570px;
+}
+
+.form-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.form-section button {
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px 40px;
+}
+
+.form-section ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.form-section li {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.form-section a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #B7B7B7;
+}
+
+.form-section a.active {
+    color: #3B3B58;
+}
+
+.form-section input {
+    border: none;
+    display: inline;
+    width: 85%;
+    height: 40px;
+    margin: 0;
+}
+
+.form-section label {
+    display: inline;
+    width: 10%;
+    font-size: 16px;
+    color: #3B3B58;
+    text-align: right;
+    align-self: center;
+
+}
+
+
+.form-section form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+

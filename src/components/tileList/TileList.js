@@ -3,7 +3,7 @@ import { Tile } from '../tile/Tile';
 
 export const TileList = ({array}) => {
   return (
-    <div>
+    <div className="div-column">
       
       {array.map((arrayItem) => {
         return (
