@@ -6,8 +6,10 @@ import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 import '../src/App.css';
 import { FormPage } from "./containers/formPage/formPage";
 import { AppointmentFormPage } from './containers/appointmentFormPage/appointmentFormPage';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
-function App() {
+function App({children}) {
   const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
   const [isLogin, setIsLogin] = useState(false);
@@ -46,8 +48,10 @@ function App() {
   ));
   
   return (
-    <RouterProvider router={router}/>
-  );
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <RouterProvider router={router}/>
+    </LocalizationProvider>
+  );  
 }
 
 export default App;

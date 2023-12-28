@@ -1,0 +1,48 @@
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+    overflow: visible !important;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1g57fp-MuiAutocomplete-root .MuiOutlinedInput-root {
+    padding-right: 10px !important;
+}
+
+.MuiAutocomplete-hasPopupIcon.css-1g57fp-MuiAutocomplete-root .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon.css-1g57fp-MuiAutocomplete-root .MuiOutlinedInput-root {
+    padding-right: 10px !important;
+}
+
+.MuiAutocomplete-hasPopupIcon.css-1g57fp-MuiAutocomplete-root .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon.css-1g57fp-MuiAutocomplete-root .MuiOutlinedInput-root {
+    padding-right: 39px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.css-1q60rmi-MuiAutocomplete-endAdornment {
+    position: relative !important;
+    width: 25% !important;
+    top: 0 !important;
+    justify-content: flex-end;
+}
+
+.css-1g57fp-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+    width: 70% !important;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-1g57fp-MuiAutocomplete-root .MuiOutlinedInput-root {
+    padding-right: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+button.css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator, button.css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator {
+    margin: 0 !important;
+    padding: 5px !important;
+}
+
+.MuiAutocomplete-input label {
+    width: 100px !important;
+    overflow: visible !important;
+}
+
+.MuiOutlinedInput-root {
+    padding-right: 10px !important;
+}

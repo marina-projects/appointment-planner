@@ -21,6 +21,6 @@ export const ContactForm = ({
         <input id='email' type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
         <button type='submit'>Next</button>
       </form>
-    </>
+      </>
   );
 };
