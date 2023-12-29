@@ -1,7 +1,7 @@
 import React from "react";
 import { ContactPicker } from '../contactPicker/ContactPicker';
 import { DatePickerForm } from "../DatePicker/DatePicker";
-import { DatePicker } from "@mui/x-date-pickers";
+import { DatePicker, TimePicker } from "@mui/x-date-pickers";
 
 export const AppointmentForm = ({
   contacts,
@@ -24,6 +24,10 @@ export const AppointmentForm = ({
     setDate(newDate.format('DD-MM-YYYY'));
   };
 
+  const handleTimeChange = (newTime) => {
+    setTime(newTime.format('HH:mm'));
+  };
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -37,7 +41,15 @@ export const AppointmentForm = ({
           value={date || null}
           onChange={handleDateChange}
         />
-        <input type="time" value={time} id="time" placeholder="Choose time" onChange={(e) => setTime(e.target.value)}/>
+        <TimePicker 
+          label="Choose time"
+          sx={{ width: 450 }}
+          size={'small'}
+          ampm={false}
+          ampmInClock={false}
+          value={time || null}
+          onChange={handleTimeChange}
+        />
         <button type="submit">Submit</button>
       </form>
     </>

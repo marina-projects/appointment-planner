@@ -7,7 +7,8 @@ import '../src/App.css';
 import { FormPage } from "./containers/formPage/formPage";
 import { AppointmentFormPage } from './containers/appointmentFormPage/appointmentFormPage';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import 'dayjs/locale/en-gb';
 
 function App({children}) {
   const [contacts, setContacts] = useState([]);
@@ -48,7 +49,7 @@ function App({children}) {
   ));
   
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale='en-gb' >
       <RouterProvider router={router}/>
     </LocalizationProvider>
   );  
