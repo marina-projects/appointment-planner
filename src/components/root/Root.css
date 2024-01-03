@@ -24,6 +24,7 @@
 .main-page {
     width: 75%;
     height: 100%;
+    padding-bottom: 30px;
 }
 
 .menu-item {
@@ -86,11 +87,12 @@ nav > a {
     align-items: center;
     text-decoration: none;
     border-radius: 10px;
+    color: #7A5980;
 }
 
 .menu-item-card.active {
     background-color: #7A5980;
-    color: white;
+    color: white !important;
 }
 
 .menu-item-card a {
@@ -104,6 +106,7 @@ nav > a {
 .menu-item-card:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
+    color: #7A5980;
 }
 
 .nav-cards h2, .nav-cards p {

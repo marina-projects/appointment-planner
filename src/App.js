@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate } from "react-router-dom";
 import Root, { ROUTES } from "./components/root/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
@@ -9,14 +9,22 @@ import { AppointmentFormPage } from './containers/appointmentFormPage/appointmen
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import 'dayjs/locale/en-gb';
+import dayjs from 'dayjs';
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
+import localeData from 'dayjs/plugin/localeData';
 
-function App({children}) {
+dayjs.extend(isSameOrAfter);
+dayjs.extend(localeData);
+
+dayjs.locale('en-gb');
+
+function App() {
   const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
   const [isLogin, setIsLogin] = useState(false);
 
   const handleLoginLogout = () => {
-      setIsLogin(!isLogin);
+    setIsLogin(!isLogin);
   }
 
   const addContact = (name, phone, email) => {
@@ -24,8 +32,7 @@ function App({children}) {
       name: name,
       phone: phone,
       email: email,
-    },
-  ]);
+    }]);
   };
 
   const addAppointment = (nameApp, date, time, chosenContact) => {
@@ -34,8 +41,7 @@ function App({children}) {
       time: time,
       nameApp: nameApp,
       chosenContact: chosenContact
-    },
-  ]);
+    }]);
   }
 
   const router = createBrowserRouter(createRoutesFromElements(

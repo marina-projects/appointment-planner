@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
-import iconLine from '../../images/icon-line.svg'
+import iconLine from '../../images/icon-line.svg';
 
 
 export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) => {
@@ -10,6 +10,9 @@ export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) 
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [chosenContact, setChosenContact] = useState({});
+
+    const navigate = useNavigate();
+
     
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -17,6 +20,7 @@ export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) 
       setDate('');
       setTime('');
       setNameApp('');
+      navigate('/appointments');
     };
   
     return (

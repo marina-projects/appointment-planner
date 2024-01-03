@@ -21,9 +21,15 @@ export const AppointmentForm = ({
   }
 
   const handleDateChange = (newDate) => {
-    setDate(newDate.format('DD-MM-YYYY'));
+    if (newDate) {
+      const formattedDate = new Intl.DateTimeFormat('en-US').format(newDate);
+      setDate(formattedDate);
+    } else {
+      setDate(null);
+    }
   };
 
+  
   const handleTimeChange = (newTime) => {
     setTime(newTime.format('HH:mm'));
   };

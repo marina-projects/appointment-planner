@@ -5,12 +5,25 @@ import { AppointmentList } from "../../components/appointmentList/appointmentLis
 
 export const AppointmentsPage = ( {contacts, appointments, addAppointment} ) => {
 
-  return (
+  if(!appointments || appointments.length === 0) {
+    return (
+      <div>
+        <section className="appointments div-column">
+          <h2>Appointments</h2>
+          <p>There is no appointments yet</p>
+          
+        </section>
+      </div>
+    );
+  } else {
+    return (
     <div>
-      <section className="appointments div-column">
-        <h2>Appointments</h2>
-        <AppointmentList appointments={appointments} />
-      </section>
-    </div>
-  );
+        <section className="appointments div-column">
+          <h2>Appointments</h2>
+          <AppointmentList appointments={appointments} />
+        </section>
+      </div>
+    );
+  }
+ 
 };
