@@ -5,7 +5,7 @@ import iconAdd from '../../images/icon-add.svg';
 import iconAppointments from '../../images/icon-appointments.svg';
 import iconUsers from '../../images/icon-users.svg';
 import iconLogout from '../../images/icon-logout.svg';
-import { PlusCircle, PlusCircleFill, Calendar4Week, People, CalendarPlus } from 'react-bootstrap-icons';
+import { PlusCircle, Calendar4Week, People, CalendarPlus } from 'react-bootstrap-icons';
 
 export const ROUTES = {
     CONTACTS: "/contacts",
