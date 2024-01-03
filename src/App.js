@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate } from "react-router-dom";
-import Root, { ROUTES } from "./components/root/Root";
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate, useNavigate } from "react-router-dom";
+import Root, { ROUTES } from "./components/Roots/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 import '../src/App.css';
@@ -12,6 +12,8 @@ import 'dayjs/locale/en-gb';
 import dayjs from 'dayjs';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import localeData from 'dayjs/plugin/localeData';
+import { WelcomePage } from "./containers/welcomePage/WelcomePage";
+import { RootWelcome } from "./components/Roots/RootMainContent";
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(localeData);
@@ -21,7 +23,7 @@ dayjs.locale('en-gb');
 function App() {
   const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
 
   const handleLoginLogout = () => {
     setIsLogin(!isLogin);
@@ -51,6 +53,7 @@ function App() {
       <Route path={ROUTES.APPFORM} element={<AppointmentFormPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />} />
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
       <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
+      <Route path={ROUTES.WELCOME} element={WelcomePage} />
     </Route>
   ));
   

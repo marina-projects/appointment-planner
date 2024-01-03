@@ -1,13 +1,14 @@
 import React from "react";
-import { Tile } from '../tile/Tile';
+import { ContactCard } from '../contactCard/ContactCard';
+import '../contactList/contactList.css';
 
-export const TileList = ({array}) => {
+export const ContactList = ({array}) => {
   return (
-    <div className="div-column">
+    <div className="contact-list div-column">
       
       {array.map((arrayItem) => {
         return (
-          <Tile 
+          <ContactCard
             name={arrayItem.name}
             email={arrayItem.email}
             phone={arrayItem.phone}

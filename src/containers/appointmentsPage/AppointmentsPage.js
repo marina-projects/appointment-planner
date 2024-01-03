@@ -11,7 +11,6 @@ export const AppointmentsPage = ( {contacts, appointments, addAppointment} ) => 
         <section className="appointments div-column">
           <h2>Appointments</h2>
           <p>There is no appointments yet</p>
-          
         </section>
       </div>
     );

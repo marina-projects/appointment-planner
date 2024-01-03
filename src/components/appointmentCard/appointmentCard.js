@@ -16,17 +16,23 @@ export const AppointmentCard = ( {nameApp, date, time, chosenContact } ) => {
                 <div className="contact-container div-column">
                     <h3>Date: {date}</h3>
                     <h3>Time: {time}</h3>
-                    <div className="contact-data div-column">
-                        <h3>Contact data:</h3>
-                        {chosenContact ? (
-                            <>
-                            <p><img src={iconUser} alt=''/>  {chosenContact.name}</p>
-                            <p><img src={iconEmail} alt=''/> {chosenContact.phone}</p>
-                            <p><img src={iconPhone} alt=''/> {chosenContact.email}</p>
-                            </>
-                        ) : (
-                            <p>No contact selected</p>
-                        )}
+                    <div className="contact-data div-row">
+                        <div className="contact-data-text div-column">
+                            <h3>Contact data:</h3>
+                            {chosenContact ? (
+                                <>
+                                <p><img src={iconUser} alt=''/>  {chosenContact.name}</p>
+                                <p><img src={iconEmail} alt=''/> {chosenContact.phone}</p>
+                                <p><img src={iconPhone} alt=''/> {chosenContact.email}</p>
+                                </>
+                            ) : (
+                                <p>No contact selected</p>
+                            )}
+                        </div>
+                        <div className="contact-data-icon">
+                            <img src={iconEdit} alt=''/>
+                        </div>
+                        
                     </div>
                 </div>
                 <div className="icons-container div-row">
