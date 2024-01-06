@@ -2,6 +2,7 @@ import React from "react";
 import '../welcomePage/welcomePage.css';
 import backMobile from '../../images/back-mobile.png';
 import backDesktop from '../../images/background.png';
+import ModalSignUp from "../../components/modalSignUp/ModalSignUp";
 
 export const WelcomePage = ( {handleLoginLogout} ) => {
     return (
@@ -12,7 +13,7 @@ export const WelcomePage = ( {handleLoginLogout} ) => {
                 <div className="welcome-content div-column">
                     <h1>Appointment Planner</h1>
                     <p>For your administrators</p>
-                    <button className="button-login" onClick={handleLoginLogout}>Let's try!</button>
+                    <ModalSignUp buttonText="Let's try!"/>
                 </div>
                 <div className="image-container div-column">
                         <img src={backMobile} alt='' className="back-mobile" />

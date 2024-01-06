@@ -13,7 +13,7 @@ import dayjs from 'dayjs';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import localeData from 'dayjs/plugin/localeData';
 import { WelcomePage } from "./containers/welcomePage/WelcomePage";
-import { RootWelcome } from "./components/Roots/RootMainContent";
+import { RootMainContent } from "./components/Roots/RootMainContent";
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(localeData);
@@ -23,7 +23,7 @@ dayjs.locale('en-gb');
 function App() {
   const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
 
   const handleLoginLogout = () => {
     setIsLogin(!isLogin);
@@ -48,12 +48,16 @@ function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root handleLoginLogout={handleLoginLogout} isLogin={isLogin} /> }>
-      <Route index element={ <Navigate to={ROUTES.CONTACTFORM} replace/> }/>
-      <Route path={ROUTES.CONTACTFORM} element={<FormPage contacts={contacts} addContact={addContact}/>} />
-      <Route path={ROUTES.APPFORM} element={<AppointmentFormPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />} />
-      <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
-      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
+
       <Route path={ROUTES.WELCOME} element={<WelcomePage handleLoginLogout={handleLoginLogout}/>} />
+
+      <Route path="/" element={<RootMainContent />}>
+        <Route index element={ <Navigate to={ROUTES.CONTACTFORM} replace/> }/>
+        <Route path={ROUTES.CONTACTFORM} element={<FormPage contacts={contacts} addContact={addContact}/>} />
+        <Route path={ROUTES.APPFORM} element={<AppointmentFormPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />} />
+        <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
+        <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
+      </Route>
     </Route>
   ));
   

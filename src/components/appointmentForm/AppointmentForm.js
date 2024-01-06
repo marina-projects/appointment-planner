@@ -1,6 +1,6 @@
 import React from "react";
 import { ContactPicker } from '../contactPicker/ContactPicker';
-import { DatePickerForm } from "../DatePicker/DatePicker";
+import { DatePickerForm } from "../datePicker/DatePicker";
 import { DatePicker, TimePicker } from "@mui/x-date-pickers";
 
 export const AppointmentForm = ({

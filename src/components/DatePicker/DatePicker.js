@@ -1,5 +1,5 @@
 import { DatePicker } from "@mui/x-date-pickers";
-import '../DatePicker/datePicker.css'
+import './datePicker.css'
 
 export const DatePickerForm = ( {date, setDate} ) => {
     return (

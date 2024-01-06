@@ -36,22 +36,15 @@
 }
 
 .header button {
-    background-color: white;
-    color: #A96DA3;
+    /* background-color: white;
+    color: #A96DA3; */
 }
 
 .header-welcome button {
-    background-color: #53489C;
-    color: white;
+    /* background-color: #53489C;
+    color: white; */
     margin-right: 20px;
     border-radius: 10px;
-}
-
-.header-welcome button.button-login {
-    background-color: white;
-    color: #53489C;
-    border: 1px solid #53489C;
-    margin-right: 20px;
 }
 
 
@@ -59,23 +52,28 @@
     margin-right: 10px;
 }
 
+.button-popup {
+    display: inline;
+    width: auto;
+}
+
 @media (max-width: 768px) {
 
 
     .header-welcome button {
-        background-color: #A96DA3;
-        color: white;
         margin-right: 10px;
         padding: 5px 15px;
     }
-        
-    
-    .header-welcome button.button-login {
-        background-color: white;
-        color: #A96DA3;
-        border: 1px solid #A96DA3;
-        margin-right: 10px;
-        padding: 4px 15px;
+
+    .css-1y37u7z {
+        background-color: white !important;
+        color: #A96DA3 !important;
+        border-color: #A96DA3 !important;
+    }
+
+    .css-1vmt3n3 {
+        background-color: #A96DA3 !important;
+        color: white !important;
     }
     
     

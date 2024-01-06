@@ -1,5 +1,7 @@
 import React from "react";
-import '../header/header.css'
+import '../header/header.css';
+import ModalSignUp from "../../components/modalSignUp/ModalSignUp";
+import ModalLogin from "../../components/modalLogin/ModalLogin";
 
 export const Header = ({ handleLoginLogout, isLogin }) => {
     if (!isLogin) {
@@ -7,8 +9,8 @@ export const Header = ({ handleLoginLogout, isLogin }) => {
             <div className="header header-welcome div-row">
                 <h2>A-Planner</h2>
                 <div className="header-buttons div-row">
-                    <button className="button-login" onClick={handleLoginLogout}>Login</button>
-                    <button onClick={handleLoginLogout}>SignUp</button>
+                    <ModalLogin handleLoginLogout={handleLoginLogout}/>
+                    <ModalSignUp handleLoginLogout={handleLoginLogout} buttonText='Sign Up'/>
                 </div>
             </div>
         )
