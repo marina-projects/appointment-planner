@@ -53,7 +53,7 @@ function App() {
       <Route path={ROUTES.APPFORM} element={<AppointmentFormPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />} />
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
       <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
-      <Route path={ROUTES.WELCOME} element={WelcomePage} />
+      <Route path={ROUTES.WELCOME} element={<WelcomePage handleLoginLogout={handleLoginLogout}/>} />
     </Route>
   ));
   

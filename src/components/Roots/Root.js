@@ -21,10 +21,10 @@ function Root( {handleLoginLogout, isLogin} ) {
         );
     } else {
         return (
-            <>
+            <div className="root-welcome">
                 <Header handleLoginLogout={handleLoginLogout} isLogin={isLogin} />
-                <WelcomePage />
-            </>
+                <WelcomePage handleLoginLogout={handleLoginLogout}/>
+            </div>
         )
     }
 
