@@ -1,24 +1,46 @@
 .nav-div {
     width: 25%;
     border: none;
-    background-color: #F5F5F5;
-    height: 100%;
+    background-color: #7A5980;
+    height: 100vh;
     margin: 0;
     padding: 0;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-  top: 10%;
-  left: 0;
+    top: 0;
+    left: -25%;
+}
+
+.opened-menu {
+    left: 0;
+}
+
+.menu-button {
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    background-color: #F5F5F5;
+    width: 40px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 20px;
 }
 
 .main-content {
     justify-content: space-between;
     height: 100%;
     overflow-y: auto;
-    height: 100vh; /* Устанавливаем высоту, чтобы колонка занимала всю доступную высоту, при необходимости можно настроить в зависимости от ваших требований */
-    margin-left: 25%;
+    height: 100vh; 
+    margin-left: 0;
     margin-top: 90px;
+    padding-left: 5%;
+}
+
+.opened-main-content {
+    margin-left: 25%;
 }
 
 .main-page {
@@ -28,17 +50,20 @@
 }
 
 .menu-item {
-    color: #7A5980;
+    color: white;
     margin-bottom: 40px;
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
+    gap: 10px
 }
 
 .menu-item:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
+    color: white;
 }
 
 .menu-item.active {
@@ -46,7 +71,7 @@
 }
 
 nav {
-    margin-top: 70px;
+    margin-top: 50%;
     display: flex;
     flex-direction: column;
     border: none;
@@ -55,10 +80,6 @@ nav {
 nav > a {
     margin: 0;
     font-size: 16px;
-}
-
-.menu-item img {
-    margin-right: 10px;
 }
 
 .logout button {
@@ -88,6 +109,7 @@ nav > a {
     text-decoration: none;
     border-radius: 10px;
     color: #7A5980;
+    text-align: center;
 }
 
 .menu-item-card.active {

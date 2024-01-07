@@ -13,7 +13,7 @@ export const WelcomePage = ( {handleLoginLogout} ) => {
                 <div className="welcome-content div-column">
                     <h1>Appointment Planner</h1>
                     <p>For your administrators</p>
-                    <ModalSignUp buttonText="Let's try!"/>
+                    <ModalSignUp buttonText="Let's try!" handleLoginLogout={handleLoginLogout}/>
                 </div>
                 <div className="image-container div-column">
                         <img src={backMobile} alt='' className="back-mobile" />

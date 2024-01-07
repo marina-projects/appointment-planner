@@ -1,10 +1,9 @@
 import {  Outlet, NavLink } from "react-router-dom";
 import './Root.css';
-import iconAdd from '../../images/icon-add.svg';
-import iconAppointments from '../../images/icon-appointments.svg';
-import iconUsers from '../../images/icon-users.svg';
 import iconLogout from '../../images/icon-logout.svg';
-import { PlusCircle, Calendar4Week, People, CalendarPlus } from 'react-bootstrap-icons';
+import { PlusCircle, Calendar4Week, People, CalendarPlus, List, XLg, BoxArrowLeft } from 'react-bootstrap-icons';
+import { useState } from "react";
+import { setMilliseconds } from "date-fns";
 
 export const ROUTES = {
     CONTACTS: "/contacts",
@@ -15,29 +14,39 @@ export const ROUTES = {
   };
 
 export const RootMainContent = ({ handleLoginLogout, isLogin }) => {
+
+    const [openMenu, setOpenMenu] = useState(false);
+
+    const handleOpenMenu = () => {
+        setOpenMenu(!openMenu);
+    }
+
   return (
     <>
-      <div className="main-content div-row">
-        <div className="nav-div div-column">
+      <div className={`main-content div-row ${openMenu ? 'opened-main-content' : ''}`}>
+        <div className={`nav-div div-column ${openMenu ? 'opened-menu' : ''}`}>
             <nav>
                 <NavLink to={ROUTES.CONTACTFORM} className="menu-item">
-                    <img src={iconAdd} alt='' />
+                    <PlusCircle className="boot-icon"/>
                     Add new
                 </NavLink>
                 <NavLink to={ROUTES.APPOINTMENTS} className="menu-item" >
-                    <img src={iconAppointments} alt='' />
+                    <Calendar4Week className="boot-icon"/>
                     Appointments
                 </NavLink>
                 <NavLink to={ROUTES.CONTACTS} className="menu-item" >
-                    <img src={iconUsers} alt='' />        
+                    <People className="boot-icon"/>        
                     Contacts
                 </NavLink>
             </nav>
             <div className="logout div-column">
                 <button className="menu-item" onClick={handleLoginLogout}>
-                    <img src={iconLogout} alt="" />
+                    <BoxArrowLeft className="boot-icon exit-icon" />        
                         Log Out
                 </button>
+            </div>
+            <div className="menu-button div-column" onClick={handleOpenMenu}>
+                {openMenu ? <XLg className="boot-icon"/> : <List className="boot-icon"/>}       
             </div>
         </div>
         <div className="main-page div-column">

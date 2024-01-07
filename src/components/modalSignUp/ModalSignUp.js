@@ -140,18 +140,13 @@ const TriggerButton = styled('button')(
     background-color: #53489C;
     color: white;
 
-    // &:hover {
-    //   background: ${theme.palette.mode === 'dark' ? grey[800] : grey[50]};
-    //   border-color: ${theme.palette.mode === 'dark' ? grey[600] : grey[300]};
-    }
+    // &:active {
+    //     background-color: #53489C;
+    // }
 
-    &:active {
-        background-color: #53489C;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 4px ${theme.palette.mode === 'dark' ? blue[300] : blue[200]};
-      outline: none;
-    }
+    // &:focus-visible {
+    //   box-shadow: 0 0 0 4px ${theme.palette.mode === 'dark' ? blue[300] : blue[200]};
+    //   outline: none;
+    // }
   `,
 );
