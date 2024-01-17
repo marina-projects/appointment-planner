@@ -12,8 +12,8 @@ import 'dayjs/locale/en-gb';
 import dayjs from 'dayjs';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import localeData from 'dayjs/plugin/localeData';
-import { WelcomePage } from "./containers/welcomePage/WelcomePage";
-import { RootMainContent } from "./components/Roots/RootMainContent";
+import { ContactFormName } from "./components/contactForm/ContactForm";
+import { ContactFieldName } from "./components/contactForm/fieldName";
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(localeData);
@@ -49,7 +49,9 @@ function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root handleLoginLogout={handleLoginLogout} isLogin={isLogin} /> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTFORM} replace/> }/>
-      <Route path={ROUTES.CONTACTFORM} element={<FormPage contacts={contacts} addContact={addContact}/>} />
+      <Route path={ROUTES.CONTACTFORM} element={<FormPage contacts={contacts} addContact={addContact}/>}>
+        {/* <Route index element={<ContactFieldName contacts={contacts} addContact={addContact}/>} /> */}
+      </Route>
       <Route path={ROUTES.APPFORM} element={<AppointmentFormPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />} />
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
       <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>

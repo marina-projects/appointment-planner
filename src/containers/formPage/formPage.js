@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from "react";
-import { ContactForm } from "../../components/contactForm/ContactForm";
+import { ContactForm, ContactFormName } from "../../components/contactForm/ContactForm";
 import "../formPage/formPage.css"
-import { NavLink, useNavigate } from "react-router-dom";
-import iconLine from '../../images/icon-line.svg'
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import iconLine from '../../images/icon-line.svg';
+import { Person, Telephone, Envelope, XLg } from 'react-bootstrap-icons';
+
+
 
 export const FormPage = ({contacts, addContact}) => {
 
@@ -42,24 +45,48 @@ export const FormPage = ({contacts, addContact}) => {
     }, [name,contacts,isDuplicate]);  
   
     return (
-      <div>
-        <section className="form-section">
+      <div className="main-form-section div-row">
+        <div className="info-form-section div-column">
+          <h2>Add Contact</h2>
+          <div className="form-places name-place div-row">
+            <div className="place-text-icon div-row">
+              <Person />
+              <p>{name}</p>
+            </div>
+            <XLg />
+          </div>
+          <div className="form-places phone-place div-row">
+            <div className="place-text-icon div-row">
+              <Telephone />
+              <p>{phone}</p>
+            </div>
+            <XLg />
+          </div>
+          <div className="form-places email-place div-row">
+            <div className="place-text-icon div-row">
+              <Envelope />
+              <p>{email}</p>
+            </div>
+            <XLg />
+          </div>
+        </div>
+        <div className="form-section div-column">
+            <h2 className="headline-mobile">Add Contact</h2>
             <ul>
                 <li><NavLink to="/form">1</NavLink></li>
                 <li><img src={iconLine} alt="" /></li>
                 <li><NavLink to="/add-appointment">2</NavLink></li>
             </ul>
-          <h2>Add Contact</h2>
-          <ContactForm 
-            name={name}
-            setName={setName}
-            email={email}
-            setEmail={setEmail}
-            phone={phone}
-            setPhone={setPhone}
-            handleSubmit={handleSubmit}        
-          />
-        </section>
+            <ContactForm 
+              name={name}
+              setName={setName}
+              phone={phone}
+              setPhone={setPhone}
+              email={email}
+              setEmail={setEmail}
+              handleSubmit={handleSubmit}
+            />
+        </div>
         <hr />
       </div>
     );

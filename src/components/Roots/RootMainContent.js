@@ -1,9 +1,7 @@
 import {  Outlet, NavLink } from "react-router-dom";
 import './Root.css';
-import iconLogout from '../../images/icon-logout.svg';
 import { PlusCircle, Calendar4Week, People, CalendarPlus, List, XLg, BoxArrowLeft } from 'react-bootstrap-icons';
 import { useState } from "react";
-import { setMilliseconds } from "date-fns";
 
 export const ROUTES = {
     CONTACTS: "/contacts",
@@ -46,28 +44,30 @@ export const RootMainContent = ({ handleLoginLogout, isLogin }) => {
                 </button>
             </div>
             <div className="menu-button div-column" onClick={handleOpenMenu}>
-                {openMenu ? <XLg className="boot-icon"/> : <List className="boot-icon"/>}       
-            </div>
+                    {openMenu ? <XLg className="boot-icon"/> : <List className="boot-icon"/>}       
+            </div>           
         </div>
+        <div className="toggle-mobile">
+        </div> 
         <div className="main-page div-column">
             <div className="nav-cards div-row">
                 <h2>Hello, admin!</h2>
                 <p>It’s your dashboard to make appointments from clients</p>
                 <NavLink to={ROUTES.CONTACTFORM} className="menu-item-card">
                     <PlusCircle className="boot-icon"/>
-                    Add new contact
+                    <span>Add new contact</span>
                 </NavLink>
                 <NavLink to={ROUTES.APPFORM} className="menu-item-card">
                     <CalendarPlus className="boot-icon"/>
-                    Add new appointment
+                    <span>Add new appointment</span>
                 </NavLink>
                 <NavLink to={ROUTES.APPOINTMENTS} className="menu-item-card" >
                     <Calendar4Week className="boot-icon"/>
-                    Appointments
+                    <span>Appointments</span>
                 </NavLink>
                 <NavLink to={ROUTES.CONTACTS} className="menu-item-card" >
                     <People className="boot-icon"/>        
-                    Contacts
+                    <span>Contacts</span>
                 </NavLink>
             </div>
             <div className="outlet">

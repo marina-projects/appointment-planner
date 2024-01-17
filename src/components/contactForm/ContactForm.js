@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from '@mui/material/TextField';
 import '../contactForm/contactForm.css'
+import { Outlet } from "react-router-dom";
 
 
 export const ContactForm = ({
@@ -43,14 +44,10 @@ export const ContactForm = ({
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-
-
-        {/* <label htmlFor="name">Name</label>
-        <input id="name2" type="text" value={name} onChange={(e) => setName(e.target.value)}/> */}
-        {/* <label htmlFor="phone">Phone</label>
-        <input id="phone2" type="phone" value={phone} onChange={(e) => setPhone(e.target.value)} /> */}
-        {/* <label htmlFor="email">Email</label>
-        <input id='email' type='email' value={email} onChange={(e) => setEmail(e.target.value)}/> */}
+        {/* <Outlet 
+          name={name}
+          setName={setName}
+        /> */}
         <button type='submit'>Next</button>
       </form>
       </>

@@ -1,15 +1,20 @@
 .nav-div {
     width: 25%;
     border: none;
-    background-color: #7A5980;
+    background-color: #b296b8;
     height: 100vh;
     margin: 0;
-    padding: 0;
+    padding-bottom: 5%;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0;
+    top: 10%;
     left: -25%;
+    z-index: 1000;
+}
+
+.nav-div:active {
+    background-color: #b296b8 !important;
 }
 
 .opened-menu {
@@ -18,15 +23,15 @@
 
 .menu-button {
     position: absolute;
-    top: 10%;
     left: 100%;
-    background-color: #F5F5F5;
+    background-color: #b296b8;
     width: 40px;
     height: 100%;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
     padding-top: 20px;
+    color: #fff;
 }
 
 .main-content {
@@ -35,18 +40,14 @@
     overflow-y: auto;
     height: 100vh; 
     margin-left: 0;
-    margin-top: 90px;
+    margin-top: 5%;
     padding-left: 5%;
-}
-
-.opened-main-content {
-    margin-left: 25%;
+    background-image: url(../../images/background-main.png);
 }
 
 .main-page {
-    width: 75%;
-    height: 100%;
-    padding-bottom: 30px;
+    width: 100%;
+    height: 100vh;
 }
 
 .menu-item {
@@ -71,10 +72,12 @@
 }
 
 nav {
-    margin-top: 50%;
     display: flex;
     flex-direction: column;
     border: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 8%;
 }
 
 nav > a {
@@ -93,9 +96,9 @@ nav > a {
 }
 
 .nav-cards {
-    justify-content: space-around;
-    height: 40%;
+    justify-content: space-between;
     margin-bottom: 40px;
+    width: 75%;
 }
 
 .menu-item-card {
@@ -133,22 +136,27 @@ nav > a {
 
 .nav-cards h2, .nav-cards p {
     width: 100%;
-    margin-left: 40px;
     color: #3B3B58;
+    text-align: center;
+
 }
 
 .nav-cards h2 {
     font-size: 28px;
     font-weight: 400;
-    margin-top: 40px;
+    margin-top: 7%;
 }
 
 .nav-cards p {
+    margin-top: 10px;
     margin-bottom: 40px;
+    font-size: 16px;
 }
 
-.outlet section {
-    margin-left: 30px;
+.outlet {
+    width: 75%;
+    padding-bottom: 30px;
+
 }
 
 .menu-item-card .boot-icon {
@@ -160,4 +168,105 @@ nav > a {
 
 .menu-item-card.active .boot-icon {
     color: white;
+}
+
+.toggle-mobile {
+    display: none;
+}
+
+
+@media  screen and (max-width: 768px) {
+
+    .main-content {
+        margin-top: 16%;
+        padding-left: 0;
+        background-image: url(../../images/background-main-mob.png);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+    }
+
+    .menu-item-card span {
+        display: none;
+    }
+
+    .menu-button {
+        height: 35px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .menu-button svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-div {
+        width: 60%;
+        left: -60%;
+    }
+
+    .opened-menu {
+        left: 0;
+    }
+
+    .toggle-mobile {
+            display: flex;
+            position: absolute;
+            top: 10%;
+            height: 40px;
+            background-color: #b296b8;
+    }
+
+    .menu-item {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        margin-top: 15%;
+    }
+
+    nav > a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .logout {
+        margin-bottom: 15%;
+    }
+
+    .logout button {
+        font-size: 14px;
+    }
+
+    .main-page {
+        margin-top: 12%;
+    }
+
+    .nav-cards{
+        width: 90%;
+    }
+
+    .nav-cards p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .menu-item-card {
+        height: 60px;
+        justify-content: center;
+    }
+
+    .menu-item-card .boot-icon {
+        width: 22px;
+        height: 22px;
+        margin-bottom: 0;
+    }
+
+    .outlet {
+        width: 90%;
+    }
+
+    section.form-section {
+        border-radius: 10px;
+    }
 }

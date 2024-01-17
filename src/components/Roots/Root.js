@@ -16,7 +16,7 @@ function Root( {handleLoginLogout, isLogin} ) {
         return (
             <>  
                 <Header handleLoginLogout={handleLoginLogout} isLogin={isLogin}/>
-                <RootMainContent />
+                <RootMainContent handleLoginLogout={handleLoginLogout}/>
             </>
         );
     } else {

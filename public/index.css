@@ -3,7 +3,7 @@
 }
 
 :active {
-    background-color: transparent !important;
+  background-color: inherit !important;
 }
 
 #root {
