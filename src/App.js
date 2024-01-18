@@ -12,8 +12,8 @@ import 'dayjs/locale/en-gb';
 import dayjs from 'dayjs';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import localeData from 'dayjs/plugin/localeData';
-import { ContactFormName } from "./components/contactForm/ContactForm";
 import { ContactFieldName } from "./components/contactForm/fieldName";
+import { ContactForm } from "./components/contactForm/ContactForm";
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(localeData);
@@ -50,7 +50,7 @@ function App() {
     <Route path="/" element={ <Root handleLoginLogout={handleLoginLogout} isLogin={isLogin} /> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTFORM} replace/> }/>
       <Route path={ROUTES.CONTACTFORM} element={<FormPage contacts={contacts} addContact={addContact}/>}>
-        {/* <Route index element={<ContactFieldName contacts={contacts} addContact={addContact}/>} /> */}
+        {/* <Route index element={<ContactForm contacts={contacts} addContact={addContact}/>} />  */}
       </Route>
       <Route path={ROUTES.APPFORM} element={<AppointmentFormPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />} />
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>

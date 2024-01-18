@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import { ContactForm, ContactFormName } from "../../components/contactForm/ContactForm";
 import "../formPage/formPage.css"
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, Route, useNavigate } from "react-router-dom";
 import iconLine from '../../images/icon-line.svg';
 import { Person, Telephone, Envelope, XLg } from 'react-bootstrap-icons';
+import { ContactFieldName } from "../../components/contactForm/fieldName";
 
 
 
@@ -49,34 +50,25 @@ export const FormPage = ({contacts, addContact}) => {
         <div className="info-form-section div-column">
           <h2>Add Contact</h2>
           <div className="form-places name-place div-row">
-            <div className="place-text-icon div-row">
               <Person />
               <p>{name}</p>
-            </div>
-            <XLg />
           </div>
           <div className="form-places phone-place div-row">
-            <div className="place-text-icon div-row">
               <Telephone />
               <p>{phone}</p>
-            </div>
-            <XLg />
           </div>
           <div className="form-places email-place div-row">
-            <div className="place-text-icon div-row">
               <Envelope />
               <p>{email}</p>
-            </div>
-            <XLg />
           </div>
         </div>
         <div className="form-section div-column">
             <h2 className="headline-mobile">Add Contact</h2>
-            <ul>
+            {/* <ul>
                 <li><NavLink to="/form">1</NavLink></li>
                 <li><img src={iconLine} alt="" /></li>
                 <li><NavLink to="/add-appointment">2</NavLink></li>
-            </ul>
+            </ul> */}
             <ContactForm 
               name={name}
               setName={setName}
@@ -86,6 +78,7 @@ export const FormPage = ({contacts, addContact}) => {
               setEmail={setEmail}
               handleSubmit={handleSubmit}
             />
+
         </div>
         <hr />
       </div>

@@ -6,6 +6,51 @@
   background-color: inherit !important;
 }
 
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 1.5vw;    
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  flex-direction: column;
+  padding: 0;
+  height: 100vh;
+}
+
+h2, a, p {
+  margin: 0;
+}
+
+a {
+  font-size: 16px;
+}
+
+div {
+  display: flex;
+  width: 100%;
+}
+
+button {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  background-color: #A96DA3;
+  color: white;
+  font-size: 16px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
+
 #root {
   padding: 30px;
   font-family: "Open Sans", sans-serif;
@@ -106,4 +151,10 @@ select {
 .div-column {
   flex-direction: column;
   align-items: center;
+}
+
+:focus-visible {
+  box-shadow: none !important;
+  outline: none;
+  background-color: transparent !important;
 }
