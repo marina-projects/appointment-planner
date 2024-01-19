@@ -1,8 +1,11 @@
 import React, {useState} from "react";
 import { ContactPicker } from '../contactPicker/ContactPicker';
-import { TimePicker, DateCalendar } from "@mui/x-date-pickers";
+import { DateCalendar } from "@mui/x-date-pickers";
+import { DesktopTimePicker } from '@mui/x-date-pickers';
 import Button from '@mui/material/Button';
 import '../appointmentForm/appointmentForm.css';
+import dayjs from 'dayjs';
+import { ColorToggleButton } from "../timePicker/timePicker";
 
 export const AppointmentForm = ({
   contacts,
@@ -20,7 +23,6 @@ export const AppointmentForm = ({
     setNameApp(e.target.value);
     setChosenContact(contacts.find(contact => contact.name === e.target.value));
   }
-
   const handleDateChange = (newDate) => {
     if (newDate) {
       const formattedDate = new Intl.DateTimeFormat('en-US').format(newDate);
@@ -29,9 +31,14 @@ export const AppointmentForm = ({
       setDate(null);
     }
   };
-  
-  const handleTimeChange = (newTime) => {
-    setTime(newTime.format('HH:mm'));
+
+
+  // const handleTimeChange = (newTime) => {
+  //   setTime(newTime.format('HH:mm'));
+  // };
+
+  const handleTimeChange = (e) => {
+    setTime(e.target.value);
   };
 
   const [activeStep, setActiveStep] = useState(1);
@@ -55,6 +62,7 @@ export const AppointmentForm = ({
               <li>3</li>
               <li>4</li>
             </ul>
+            
             <ContactPicker contacts={contacts} onChange={contactPick}/>
             <div className="button-area div-row">
               <Button onClick={handleNext}>Next</Button>
@@ -80,6 +88,7 @@ export const AppointmentForm = ({
               onChange={handleDateChange}
               className="calendar-picker"
             />
+
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
               <Button onClick={handleNext}>Next</Button>
@@ -95,15 +104,9 @@ export const AppointmentForm = ({
               <li className="active-li">3</li>
               <li>4</li>
             </ul>
-            <TimePicker 
-            label="Choose time"
-            sx={{ width: 450 }}
-            size={'small'}
-            ampm={false}
-            ampmInClock={false}
-            value={time || null}
-            onChange={handleTimeChange}
-            />
+            <div class="custom-time-picker div-row">
+              <ColorToggleButton time={time} setTime={setTime} handleTimeChange={handleTimeChange} />
+            </div>
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
               <Button onClick={handleNext}>Next</Button>

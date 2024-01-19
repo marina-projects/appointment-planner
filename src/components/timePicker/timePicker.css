@@ -1,0 +1,15 @@
+.custom-time-picker {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.MuiToggleButtonGroup-root {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.MuiToggleButtonGroup-grouped {
+    margin: 0 10px 10px 0;
+    border-radius: 5px !important;
+}

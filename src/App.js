@@ -8,8 +8,8 @@ import { FormPage } from "./containers/formPage/formPage";
 import { AppointmentFormPage } from './containers/appointmentFormPage/appointmentFormPage';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import 'dayjs/locale/en-gb';
 import dayjs from 'dayjs';
+import 'dayjs/locale/en-gb';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import localeData from 'dayjs/plugin/localeData';
 
