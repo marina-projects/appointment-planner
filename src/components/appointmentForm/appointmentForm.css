@@ -1,0 +1,86 @@
+.MuiDateCalendar-root {
+    width: 100% !important;
+}
+
+.MuiDayCalendar-root  {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.MuiDayCalendar-monthContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-picker button.MuiButtonBase-root, .calendar-picker button.MuiButtonBase-root:hover, button.MuiButtonBase-root:active {
+    background-color: transparent !important;
+    color: #000;
+}
+
+.MuiPickersCalendarHeader-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.MuiPickersArrowSwitcher-root {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button.MuiPickersArrowSwitcher-button {
+    padding: 7px 10px;
+}
+
+.MuiDayCalendar-header, .MuiDayCalendar-weekContainer {
+    justify-content: flex-start !important;
+}
+
+.MuiDayCalendar-weekDayLabel {
+    font-size: 14px;
+    padding: 7px 25px;
+}
+
+.MuiPickersDay-root {
+    padding: 7px 25px !important;
+}
+
+/* .MuiYearCalendar-root {
+    width: 100%;
+} */
+
+.MuiPickersCalendarHeader-switchViewButton {
+    margin: 0 !important;
+    padding: 8px 15px !important;
+}
+ 
+button.css-innj4t-MuiPickersYear-yearButton, button.css-innj4t-MuiPickersYear-yearButton:hover, button.css-innj4t-MuiPickersYear-yearButton:active {
+    color: unset;
+    background-color: transparent !important;
+    padding: 5px;
+}
+
+.css-innj4t-MuiPickersYear-yearButton.Mui-selected, .css-innj4t-MuiPickersYear-yearButton.Mui-selected:hover {
+    background-color: #A96DA3 !important;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .MuiTypography-root-MuiDayCalendar-weekDayLabel, .MuiDayCalendar-weekDayLabel, .MuiPickersDay-hiddenDaySpacingFiller, .calendar-picker button.MuiButtonBase-root {
+        font-size: 12px !important;
+        padding: 7px 15px !important;
+    }
+
+    .MuiPickersCalendarHeader-label {
+        font-size: 14px !important;
+    }
+
+    .css-cyfsxc-MuiPickersCalendarHeader-labelContainer button.MuiButtonBase-root {
+        padding: 0;
+    }
+
+    .css-innj4t-MuiPickersYear-yearButton.Mui-selected {
+        color: #fff;
+        background-color: #A96DA3;
+    }
+}

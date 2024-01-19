@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { ContactPicker } from '../contactPicker/ContactPicker';
-import { DatePickerForm } from "../datePicker/DatePicker";
-import { DatePicker, TimePicker } from "@mui/x-date-pickers";
+import { TimePicker, DateCalendar } from "@mui/x-date-pickers";
 import Button from '@mui/material/Button';
+import '../appointmentForm/appointmentForm.css';
 
 export const AppointmentForm = ({
   contacts,
@@ -70,7 +70,7 @@ export const AppointmentForm = ({
               <li>3</li>
               <li>4</li>
             </ul>
-            <DatePicker 
+            <DateCalendar 
               label="Choose date"
               sx={{ width: 450 }}
               size={'small'}
@@ -78,6 +78,7 @@ export const AppointmentForm = ({
               disablePast={true}
               value={date || null}
               onChange={handleDateChange}
+              className="calendar-picker"
             />
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>

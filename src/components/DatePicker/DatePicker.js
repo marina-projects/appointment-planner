@@ -1,16 +1,16 @@
-import { DatePicker } from "@mui/x-date-pickers";
+import { DateCalendar } from "@mui/x-date-pickers";
 import './datePicker.css'
 
-export const DatePickerForm = ( {date, setDate} ) => {
+export const DatePickerForm = ( {date, setDate, handleDateChange} ) => {
     return (
-        <DatePicker 
+        <DateCalendar 
             label="Choose date"
             sx={{ width: 450 }}
             size={'small'}
-            defaultValue={'Choose date'}
+            defaultValue={date || null}
             disablePast={true}
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            value={date || null}
+            onChange={handleDateChange}
         />
     )
 }

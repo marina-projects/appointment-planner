@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import '../src/App.css';
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate, useNavigate } from "react-router-dom";
 import Root, { ROUTES } from "./components/Roots/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
-import '../src/App.css';
 import { FormPage } from "./containers/formPage/formPage";
 import { AppointmentFormPage } from './containers/appointmentFormPage/appointmentFormPage';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -12,8 +12,6 @@ import 'dayjs/locale/en-gb';
 import dayjs from 'dayjs';
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 import localeData from 'dayjs/plugin/localeData';
-import { ContactFieldName } from "./components/contactForm/fieldName";
-import { ContactForm } from "./components/contactForm/ContactForm";
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(localeData);
@@ -49,9 +47,7 @@ function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={ <Root handleLoginLogout={handleLoginLogout} isLogin={isLogin} /> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTFORM} replace/> }/>
-      <Route path={ROUTES.CONTACTFORM} element={<FormPage contacts={contacts} addContact={addContact}/>}>
-        {/* <Route index element={<ContactForm contacts={contacts} addContact={addContact}/>} />  */}
-      </Route>
+      <Route path={ROUTES.CONTACTFORM} element={<FormPage contacts={contacts} addContact={addContact}/>} />
       <Route path={ROUTES.APPFORM} element={<AppointmentFormPage appointments={appointments} contacts={contacts} addAppointment={addAppointment} />} />
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> /* Add props to ContactsPage */ }/>
       <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} contacts={contacts} addAppointment={addAppointment}/> /* Add props to AppointmentsPage */ }/>
