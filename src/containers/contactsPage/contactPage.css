@@ -8,5 +8,21 @@
 .contacts {
     justify-content: flex-start;
     align-items: flex-start !important;
-    padding-left: 30px;
+}
+
+.contacts p {
+    font-size: 16px;
+}
+
+p.white-font {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+button.add-new {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-top: 30px;
 }

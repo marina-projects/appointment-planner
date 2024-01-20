@@ -9,7 +9,38 @@
     flex-wrap: wrap;
 }
 
-.MuiToggleButtonGroup-grouped {
+button.MuiToggleButtonGroup-grouped {
     margin: 0 10px 10px 0;
     border-radius: 5px !important;
+    background-color: transparent;
+    border: 1px solid #676767 !important;
+    border-left: 1px solid #676767;
+    color: #000;
+}
+
+button.MuiToggleButtonGroup-grouped:hover {
+    background-color: #c0c0c0 !important;
+    color: #000;
+}
+
+.MuiToggleButtonGroup-grouped.Mui-disabled {
+    background-color: #ebebeb;
+    color: #b5b5b5;
+    border: 1px solid #b5b5b5 !important;
+}
+
+.MuiToggleButtonGroup-grouped.Mui-selected {
+    background-color: #c0c0c0 !important;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .MuiToggleButtonGroup-root {
+        justify-content: center;
+    }
+
+    .MuiToggleButtonGroup-grouped {
+        margin: 0 10px 10px 0;
+        padding: 7px 20px !important;
+    }
 }

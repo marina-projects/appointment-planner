@@ -1,11 +1,7 @@
 import React, {useState} from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
-import iconLine from '../../images/icon-line.svg';
-import { datePickerToolbarClasses } from "@mui/x-date-pickers";
-import { Person, Telephone, Envelope } from 'react-bootstrap-icons';
-
-
+import { Person, CalendarCheck, Clock } from 'react-bootstrap-icons';
 
 export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) => {
 
@@ -15,7 +11,6 @@ export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) 
     const [chosenContact, setChosenContact] = useState({});
 
     const navigate = useNavigate();
-
     
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -35,11 +30,11 @@ export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) 
               <p>{nameApp}</p>
           </div>
           <div className="form-places phone-place div-row">
-              <Telephone />
+              <CalendarCheck />
               <p>{date}</p>
           </div>
           <div className="form-places email-place div-row">
-              <Envelope />
+              <Clock />
               <p>{time}</p>
           </div>
         </div>
@@ -57,7 +52,6 @@ export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) 
               chosenContact={chosenContact}
               setChosenContact={setChosenContact}
             />
-
         </div>
         <hr />
       </div>

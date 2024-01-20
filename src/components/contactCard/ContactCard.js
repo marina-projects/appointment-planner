@@ -10,7 +10,6 @@ export const ContactCard = ({name, phone, email}) => {
   return (
     <div className="contact-card div-row">
       <div className="contact-data-text div-column">
-        <h3>Contact data:</h3>
         <p><img src={iconUser} alt=''/> {name}</p>
         <p><img src={iconPhone} alt=''/> {phone}</p>
         <p><img src={iconEmail} alt=''/> {email}</p> 

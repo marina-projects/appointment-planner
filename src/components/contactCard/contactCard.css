@@ -1,6 +1,6 @@
 .contact-card {
     border: 0.8px solid #979797;
-    padding: 15px 10px 15px 30px;
+    padding: 20px 10px;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -8,14 +8,19 @@
     justify-content: space-between;
 }
 
-.contact-card h3 {
-    width: 100%;
-    font-size: 18px;
+.contact-data-text {
+    gap: 15px;
+}
+
+.contact-card p {
+    font-size: 16px;
     font-weight: 400;
 }
 
 .contact-card img {
     margin-left: 10px;
+    margin-right: 5px;
+    width: 18px;
 }
 
 .contact-card img:hover {
@@ -30,4 +35,27 @@
 
 .contact-card .contact-data-icon {
     width: 15%;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-card{
+        padding: 10px;
+    }
+
+    .contact-card .contact-data-text {
+        width: 80%;
+    }
+
+    .contact-card p {
+        font-size: 14px;
+    }
+
+    .contact-card img {
+        margin: 0;
+    }
+
+    .contact-data-icon {
+        justify-content: flex-end;
+        gap: 5px;
+    }
 }

@@ -20,16 +20,16 @@ export const ColorToggleButton = ( {time, setTime, handleTimeChange} ) => {
         aria-label="Choose time"
       >
         <ToggleButton value="10:00">10:00</ToggleButton>
-        <ToggleButton value="11:00">11:00</ToggleButton>
-        <ToggleButton value="12:00">12:00</ToggleButton>
+        <ToggleButton value="11:00" disabled>11:00</ToggleButton>
+        <ToggleButton value="12:00" disabled>12:00</ToggleButton>
         <ToggleButton value="13:00">13:00</ToggleButton>
         <ToggleButton value="14:00">14:00</ToggleButton>
         <ToggleButton value="15:00">15:00</ToggleButton>
         <ToggleButton value="16:00">16:00</ToggleButton>
         <ToggleButton value="17:00">17:00</ToggleButton>
-        <ToggleButton value="18:00">18:00</ToggleButton>
+        <ToggleButton value="18:00" disabled>18:00</ToggleButton>
         <ToggleButton value="19:00">19:00</ToggleButton>
-        <ToggleButton value="20:00">20:00</ToggleButton>
+        <ToggleButton value="20:00" disabled>20:00</ToggleButton>
         <ToggleButton value="21:00">21:00</ToggleButton>
       </ToggleButtonGroup>
     );

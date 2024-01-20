@@ -32,7 +32,6 @@ export const AppointmentForm = ({
     }
   };
 
-
   // const handleTimeChange = (newTime) => {
   //   setTime(newTime.format('HH:mm'));
   // };
