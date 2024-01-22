@@ -21,14 +21,14 @@ export const AppointmentForm = ({
     setNameApp(e.target.value);
     setChosenContact(contacts.find(contact => contact.name === e.target.value));
   }
-  const handleDateChange = (newDate) => {
-    if (newDate) {
-      const formattedDate = new Intl.DateTimeFormat('en-US').format(newDate);
-      setDate(formattedDate);
-    } else {
-      setDate(null);
-    }
-  };
+  // const handleDateChange = (newDate) => {
+  //   if (newDate) {
+  //     const formattedDate = new Intl.DateTimeFormat('en-US').format(newDate);
+  //     setDate(formattedDate);
+  //   } else {
+  //     setDate(null);
+  //   }
+  // };
 
   // const handleTimeChange = (newTime) => {
   //   setTime(newTime.format('HH:mm'));
@@ -82,7 +82,6 @@ export const AppointmentForm = ({
               defaultValue={date || null}
               disablePast={true}
               value={date || null}
-              onChange={handleDateChange}
               className="calendar-picker"
             />
 
