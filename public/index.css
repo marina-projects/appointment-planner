@@ -18,6 +18,11 @@ body {
   color: var(--text-dark-color);
 }
 
+:focus-visible {
+  box-shadow: none !important;
+  outline: none;
+}
+
 div {
   display: flex;
   width: 100%;

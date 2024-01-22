@@ -31,7 +31,7 @@ button.MuiToggleButtonGroup-grouped:hover {
 
 .MuiToggleButtonGroup-grouped.Mui-selected {
     background-color: #c0c0c0 !important;
-    color: #000;
+    color: var(--text-dark-color) !important;
 }
 
 @media screen and (max-width: 768px) {
