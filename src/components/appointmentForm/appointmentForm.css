@@ -13,7 +13,7 @@
     flex-direction: column;
 }
 
-.calendar-picker button.MuiButtonBase-root, .calendar-picker button.MuiButtonBase-root:hover, button.MuiButtonBase-root:active {
+.calendar-picker button.MuiButtonBase-root, .calendar-picker button.MuiButtonBase-root:hover {
     background-color: transparent !important;
     color: #000;
 }
@@ -45,9 +45,6 @@ button.MuiPickersArrowSwitcher-button {
     padding: 7px 25px !important;
 }
 
-/* .MuiYearCalendar-root {
-    width: 100%;
-} */
 
 .MuiPickersCalendarHeader-switchViewButton {
     margin: 0 !important;
@@ -63,6 +60,10 @@ button.css-innj4t-MuiPickersYear-yearButton, button.css-innj4t-MuiPickersYear-ye
 .css-innj4t-MuiPickersYear-yearButton.Mui-selected, .css-innj4t-MuiPickersYear-yearButton.Mui-selected:hover {
     background-color: #A96DA3 !important;
     color: #fff;
+}
+
+.contact-picker {
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {

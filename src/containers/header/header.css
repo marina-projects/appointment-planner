@@ -1,31 +1,26 @@
 .header {
     justify-content: space-between;
-    background-color: #A96DA3;
-    padding: 10px 0px;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
     height: 10%;
     position: fixed;
-    z-index: 10;
-}
-
-.header:active {
-    background-color: #A96DA3 !important;
+    z-index: 2000;
 }
 
 .header-welcome {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 .header-buttons {
     width: 50%;
     justify-content: flex-end;
-    margin-right: 30px;
+    gap: 20px;
 }
 
 .header h2 {
     margin-left: 30px;
-    color: white;
-    font-size: 30px;
-    font-weight: 500;
+    color: var(--white-color);
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -34,31 +29,14 @@
     transition-duration: 500ms;
 }
 
-.header button.button-login {
-    background-color: transparent;
-    color: white;
-}
-
-.header button {
-    /* background-color: white;
-    color: #A96DA3; */
-}
-
-.header-welcome button {
-    /* background-color: #53489C;
-    color: white; */
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-
-.header-welcome .header-buttons {
-    margin-right: 10px;
-}
-
-.button-popup {
+.button-popup, .sign-up-popup {
     display: inline;
     width: auto;
+}
+
+button.logout-button, button.logout-button:hover {
+    color: var(--white-color);
+    padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -70,34 +48,21 @@
     }
 
     .header-buttons {
-        margin-right: 0;
+        width: 60%;
+        gap: 10px;
     }
 
     .header-welcome button {
-        margin-right: 10px;
         padding: 5px 15px;
+        margin: 0;
     }
-
-    .css-1y37u7z {
-        background-color: white !important;
-        color: #A96DA3 !important;
-        border-color: #A96DA3 !important;
-    }
-
-    .css-1vmt3n3 {
-        background-color: #A96DA3 !important;
-        color: white !important;
-    }
-    
     
     .header-welcome h2 {
         color: #A96DA3;
-        font-size: 24px;
-        margin-left: 15px;
     }
-    
-    .header-welcome .header-buttons {
-        margin-right: 0;
+
+    .header button {
+        font-size: 14px;
     }
-    
+
 }

@@ -24,7 +24,7 @@ export const AppointmentFormPage = ( {contacts, appointments, addAppointment} ) 
     return (
       <div className="main-form-section div-row">
         <div className="info-form-section div-column">
-          <h2>Add an Appointment</h2>
+          <h3>Add an Appointment</h3>
           <div className="form-places name-place div-row">
               <Person />
               <p>{nameApp}</p>

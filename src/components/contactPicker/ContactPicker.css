@@ -46,3 +46,7 @@ button.css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIn
 .MuiOutlinedInput-root {
     padding-right: 10px !important;
 }
+
+.contact-picker .MuiOutlinedInput-root {
+    padding: 0 !important;
+}

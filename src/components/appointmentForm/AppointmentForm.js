@@ -64,7 +64,7 @@ export const AppointmentForm = ({
             
             <ContactPicker contacts={contacts} onChange={contactPick}/>
             <div className="button-area div-row">
-              <Button onClick={handleNext}>Next</Button>
+              <Button onClick={handleNext} className="accent-button">Next</Button>
             </div> 
           </div>
         );
@@ -90,7 +90,7 @@ export const AppointmentForm = ({
 
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
-              <Button onClick={handleNext}>Next</Button>
+              <Button onClick={handleNext} className="accent-button">Next</Button>
             </div>
           </div>
           );
@@ -108,7 +108,7 @@ export const AppointmentForm = ({
             </div>
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
-              <Button onClick={handleNext}>Next</Button>
+              <Button onClick={handleNext} className="accent-button">Next</Button>
             </div>
             
           </div>
@@ -129,7 +129,7 @@ export const AppointmentForm = ({
             </div>
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
-              <button type='submit'>Confirm</button>
+              <button type='submit' className="accent-button">Confirm</button>
             </div>
           </div>
         )

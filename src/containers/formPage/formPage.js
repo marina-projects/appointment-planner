@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import { ContactForm } from "../../components/contactForm/ContactForm";
-import "../formPage/formPage.css"
 import { useNavigate } from "react-router-dom";
 import { Person, Telephone, Envelope } from 'react-bootstrap-icons';
 
@@ -44,7 +43,7 @@ export const FormPage = ({contacts, addContact}) => {
     return (
       <div className="main-form-section div-row">
         <div className="info-form-section div-column">
-          <h2>Add Contact</h2>
+          <h3>Add Contact</h3>
           <div className="form-places name-place div-row">
               <Person />
               <p>{name}</p>

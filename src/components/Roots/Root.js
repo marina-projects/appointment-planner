@@ -11,6 +11,8 @@ export const ROUTES = {
     WELCOME: '/welcome'
   };
 
+// different pages for login and non-login users
+
 function Root( {handleLoginLogout, isLogin} ) {
     if(isLogin) {
         return (

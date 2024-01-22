@@ -23,16 +23,16 @@ export const RootMainContent = ({ handleLoginLogout, isLogin }) => {
     <>
       <div className={`main-content div-row ${openMenu ? 'opened-main-content' : ''}`}>
         <div className={`nav-div div-column ${openMenu ? 'opened-menu' : ''}`}>
-            <nav>
-                <NavLink to={ROUTES.CONTACTFORM} className="menu-item">
+            <nav className="div-column">
+                <NavLink to={ROUTES.CONTACTFORM} className="menu-item div-row">
                     <PlusCircle className="boot-icon"/>
                     Add new
                 </NavLink>
-                <NavLink to={ROUTES.APPOINTMENTS} className="menu-item" >
+                <NavLink to={ROUTES.APPOINTMENTS} className="menu-item  div-row" >
                     <Calendar4Week className="boot-icon"/>
                     Appointments
                 </NavLink>
-                <NavLink to={ROUTES.CONTACTS} className="menu-item" >
+                <NavLink to={ROUTES.CONTACTS} className="menu-item  div-row" >
                     <People className="boot-icon"/>        
                     Contacts
                 </NavLink>

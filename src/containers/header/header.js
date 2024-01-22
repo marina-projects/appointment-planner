@@ -3,6 +3,8 @@ import '../header/header.css';
 import ModalSignUp from "../../components/modalSignUp/ModalSignUp";
 import ModalLogin from "../../components/modalLogin/ModalLogin";
 
+// different content for login and non-login users
+
 export const Header = ({ handleLoginLogout, isLogin }) => {
     if (!isLogin) {
         return (
@@ -19,7 +21,7 @@ export const Header = ({ handleLoginLogout, isLogin }) => {
             <div className="header div-row">
                 <h2>A-Planner</h2>
                 <div className="header-buttons div-row">
-                    <button className="button-login" onClick={handleLoginLogout}>Logout</button>
+                    <button className="transparent-button logout-button" onClick={handleLoginLogout}>Logout</button>
                 </div>
             </div>
         )

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import '../contactForm/contactForm.css';
-import "../../containers/formPage/formPage.css"
 
 export const ContactForm = ({
   name,
@@ -44,7 +43,7 @@ export const ContactForm = ({
               required
             />
             <div className="button-area div-row">
-              <Button onClick={handleNext}>Next</Button>
+              <Button onClick={handleNext} className="accent-button">Next</Button>
             </div>  
           </div>
         );
@@ -68,7 +67,7 @@ export const ContactForm = ({
             />
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
-              <Button onClick={handleNext}>Next</Button>
+              <Button onClick={handleNext} className="accent-button">Next</Button>
             </div>
           </div>
         );
@@ -91,7 +90,7 @@ export const ContactForm = ({
             />
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
-              <Button onClick={handleNext}>Next</Button>
+              <Button onClick={handleNext} className="accent-button">Next</Button>
             </div>
           </div>
         );
@@ -111,7 +110,7 @@ export const ContactForm = ({
             </div>
             <div className="button-area div-row">
               <Button onClick={handlePrev} className="button-back">Back</Button>
-              <button type='submit'>Confirm</button>
+              <button type='submit' className="accent-button">Confirm</button>
             </div>
           </div>
         )

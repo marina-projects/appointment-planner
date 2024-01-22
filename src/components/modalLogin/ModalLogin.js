@@ -13,7 +13,7 @@ export default function ModalLogin ({handleLoginLogout}) {
 
   return (
     <div className='button-popup'>
-      <TriggerButton type="button" onClick={handleOpen} >
+      <TriggerButton type="button" onClick={handleOpen} className='transparent-button' >
         Login
       </TriggerButton>
       <Modal
@@ -131,13 +131,13 @@ const ModalContent = styled('div')(
 const TriggerButton = styled('button')(
   ({ theme }) => css`
     font-weight: 400;
-    font-size: 16px;
+    // font-size: 16px;
     line-height: 1.5;
     padding: 10px 24px;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all 150ms ease;
     cursor: pointer;
-    border: 1px solid #53489C;
+    // border: 1px solid #53489C;
     background-color: white;
     color: #53489C;
 
@@ -146,9 +146,9 @@ const TriggerButton = styled('button')(
     //   border-color: ${theme.palette.mode === 'dark' ? grey[600] : grey[300]};
     }
 
-    &:active {
-        background-color: #53489C;
-    }
+    // &:active {
+    //     background-color: #53489C;
+    // }
 
     &:focus-visible {
       box-shadow: 0 0 0 4px ${theme.palette.mode === 'dark' ? blue[300] : blue[200]};

@@ -1,8 +1,14 @@
-@media screen and (max-width: 768px) {
-    .css-154rxdb {
-        width: 800% !important;
-    }    
+.css-154rxdb:active {
+    background-color: var(--white-color) !important;
 }
 
+#unstyled-modal-title {
+    color: var(--accent-color);
+}
 
-
+@media screen and (max-width: 768px) {
+    .css-mv6gc4 {
+        width: 800% !important;
+        padding: 20px !important;
+    }
+}

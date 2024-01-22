@@ -4,16 +4,19 @@ import clsx from 'clsx';
 import { styled, css } from '@mui/system';
 import { Modal as BaseModal } from '@mui/base/Modal';
 import { SignUpForm } from '../signUpForm/SignUpForm';
-import '../modalSignUp/modalSignUp.css'
+import '../modalSignUp/modalSignUp.css';
+
+// modal from MUI library
 
 export default function ModalSignUp ({handleLoginLogout, buttonText}) {
+  
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
-    <div className='button-popup'>
-      <TriggerButton type="button" onClick={handleOpen} >
+    <div className='sign-up-popup div-column'>
+      <TriggerButton type="button" onClick={handleOpen} className='secondary-button' >
         {buttonText}
       </TriggerButton>
       <Modal
@@ -24,10 +27,10 @@ export default function ModalSignUp ({handleLoginLogout, buttonText}) {
         slots={{ backdrop: StyledBackdrop }}
       >
         <ModalContent sx={{ width: 1000 }}>
-          <h2 id="unstyled-modal-title" className="modal-title">
+          <h2 id="unstyled-modal-title">
             Welcome to A-planner!
           </h2>
-          <p id="unstyled-modal-description" className="modal-description">
+          <p id="unstyled-modal-description" >
             Sign up to get access
           </p>
           <SignUpForm handleLoginLogout={handleLoginLogout}/>
@@ -102,7 +105,7 @@ const ModalContent = styled('div')(
     gap: 10px;
     overflow: hidden;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 12px
       ${theme.palette.mode === 'dark' ? 'rgb(0 0 0 / 0.5)' : 'rgb(0 0 0 / 0.2)'};
     padding: 30px;
@@ -134,7 +137,7 @@ const TriggerButton = styled('button')(
     font-size: 16px;
     line-height: 1.5;
     padding: 10px 24px;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all 150ms ease;
     cursor: pointer;
     background-color: #53489C;

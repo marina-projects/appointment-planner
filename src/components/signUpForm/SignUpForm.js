@@ -44,7 +44,7 @@ export const SignUpForm = ( {handleLoginLogout} ) => {
         // onChange={(e) => setEmail(e.target.value)}
       />
 
-        <button type='submit'>Sign up</button>
+        <button type='submit' className="secondary-button">Sign up</button>
       </form>
       </>
   );
