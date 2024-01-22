@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 import { ContactPicker } from '../contactPicker/ContactPicker';
 import { DateCalendar } from "@mui/x-date-pickers";
-import { DesktopTimePicker } from '@mui/x-date-pickers';
 import Button from '@mui/material/Button';
 import '../appointmentForm/appointmentForm.css';
-import dayjs from 'dayjs';
 import { ColorToggleButton } from "../timePicker/timePicker";
 
 export const AppointmentForm = ({

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../contactsPage/contactPage.css';
 
 import { ContactList } from "../../components/contactList/ContactList";

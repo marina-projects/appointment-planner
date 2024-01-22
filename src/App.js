@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import '../src/App.css';
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate, useNavigate } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate } from "react-router-dom";
 import Root, { ROUTES } from "./components/Roots/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
