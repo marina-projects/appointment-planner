@@ -1,5 +1,7 @@
 # Appointment Planner
 
+Imagine, you are an administrator or owner of barber shop.. Or clinic, or any organization that should have appoinments for clients. So, this app can be part of CRM system for such types of organizations.
+
 [Appointment Planner](https://a-planner.netlify.app/) is a basic appointment making app that:
 
 - has a welcome page with authorization forms (name, email, password, confirm password)
