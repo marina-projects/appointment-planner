@@ -20,6 +20,7 @@ This project was built as part of Codecademy Front End Engineer career path.
 - node.js & npm
 - Bootstrap
 - MUI material
+- Responsive design (flex)
 
 ## What I Learned
 - General React features I have studied previously, but with increased complexity
@@ -28,6 +29,7 @@ This project was built as part of Codecademy Front End Engineer career path.
 - useState and useEffect hooks
 - Using Bootstrap and MUI material libraries to set forms
 - Using Figma to create my own web-design
+- Using flex-box containers to achive responsive design
 
 ### Crate React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
